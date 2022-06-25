@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HeartToggleButton/static/css/main.69075503.css",
+    "main.js": "/HeartToggleButton/static/js/main.195ee616.js",
+    "index.html": "/HeartToggleButton/index.html",
+    "main.69075503.css.map": "/HeartToggleButton/static/css/main.69075503.css.map",
+    "main.195ee616.js.map": "/HeartToggleButton/static/js/main.195ee616.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69075503.css",
+    "static/js/main.195ee616.js"
+  ]
+}

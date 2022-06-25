@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eb608c;
+  height: 100vh;
+}
+.body.reverse,
+.body.reverse::before,
+body.reverse:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+}
+.body.reverse,
+.body.reverse:before,
+body.reverse::after {
+  background-color: #eb608c;
+}
+
+.body.forward,
+.body.forward::before,
+body.forward:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+}
+.body.forward,
+.body.forward:before,
+body.forward::after {
+  background-color: white;
+}
+
+.toggle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  transform: rotate(-45deg);
+  border-bottom-left-radius: 80px;
+  cursor: pointer;
+}
+.toggle::before,
+.toggle::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -50%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.toggle::before {
+  top: -50%;
+  left: 0;
+}
+
+.toggle::after {
+  right: -50%;
+  top: 0;
+}
+
+.toggle.forward,
+.toggle.forward::before,
+.toggle.forward:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+}
+.toggle.forward,
+.toggle.forward:before,
+.toggle.forward::after {
+  background-color: #eb608c;
+}
+
+.toggle.reverse,
+.toggle.reverse::before,
+.toggle.reverse:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+}
+.toggle.reverse,
+.toggle.reverse:before,
+.toggle.reverse::after {
+  background-color: #fff;
+}
+
+.circle {
+  position: absolute;
+  left: 7px;
+  top: -28px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  background-color: #eb608c;
+}
+
+.circle.forward,
+.circle.forward::before,
+.circle.forward:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+}
+.circle.forward,
+.circle.forward:before,
+.circle.forward::after {
+  background-color: #fff;
+}
+
+.circle.reverse,
+.circle.reverse::before,
+.circle.reverse:after {
+  transition: 0.6s;
+  transition-delay: 0.3s;
+}
+.circle.reverse,
+.circle.reverse:before,
+.circle.reverse::after {
+  background-color: #eb608c;
+}
+.toggle.forward .circle {
+  animation: front 0.6s linear forwards;
+}
+@keyframes front {
+  0% {
+    left: 7px;
+    top: -28px;
+  }
+  50% {
+    left: 17px;
+    top: -1px;
+  }
+  100% {
+    left: 42px;
+    top: 7px;
+  }
+}
+
+.toggle.reverse .circle {
+  animation: back 0.6s linear backwards;
+}
+@keyframes back {
+  0% {
+    left: 42px;
+    top: 7px;
+  }
+  50% {
+    left: 17px;
+    top: -1px;
+  }
+  100% {
+    left: 7px;
+    top: -28px;
+  }
+}
+
+.text {
+  position: absolute;
+  top: 60%;
+  color: #eb608c;
+}
